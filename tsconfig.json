@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
+        "lib": ["es2017"],
         "target": "es2017",
+        "declaration": true,
         "module": "commonjs",
         "outDir": "./lib",
         "sourceMap": true

@@ -1,9 +1,9 @@
 {
   "name": "pubsub-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An abstraction layer for redis pubsub to be reused by services. ",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext ts",
