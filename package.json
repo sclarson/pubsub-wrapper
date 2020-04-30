@@ -1,14 +1,22 @@
 {
-  "name": "pubsub",
+  "name": "pubsub-wrapper",
   "version": "1.0.0",
   "description": "An abstraction layer for redis pubsub to be reused by services. ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test-dev": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register src/**/*.test.ts\""
+    "build": "tsc",
+    "lint": "eslint . --ext ts",
+    "prepare": "npm run build",
+    "test-dev": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register src/**/*.test.ts\"",
+    "test": "mocha -r ts-node/register src/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sclarson/pubsub-wrapper.git"
   },
   "author": "Seth Larson",
-  "license": "AGPL",
+  "license": "MIT",
   "dependencies": {
     "chai-events": "0.0.3",
     "redis": "^3.0.2",
@@ -20,7 +28,15 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.2",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
     "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.3",
     "ts-node": "^8.9.0"
